@@ -1,0 +1,45 @@
+﻿<Window x:Class="Application.WPF.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Application.WPF.View"
+        xmlns:vm="clr-namespace:Application.WPF.ViewModel"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:ViewModelManager/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" x:Name ="ViewEmploees" ItemsSource="{Binding AllEmployees}" 
+                                                      SelectedItem="{Binding SelectedEmployee}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Фамилия"
+                                                DisplayMemberBinding="{Binding Path=LastName}"/>
+                    <GridViewColumn Width="150" Header="Имя"
+                                                DisplayMemberBinding="{Binding Path=FirstName}"/>
+                    <GridViewColumn Width="150" Header="Отчество"
+                                                DisplayMemberBinding="{Binding Path=Patronymic}"/>
+                    <GridViewColumn Width="150" Header="Дата рождения"
+                                                DisplayMemberBinding="{Binding Path=BirthDate, StringFormat='yyyy-MM-dd'}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить" Command="{Binding OpenAddEmployeeFormCommand}"/>
+                    <MenuItem Header="Изменить" Command="{Binding OpenEditEmployeeFormCommand}" 
+                                               CommandParameter="{Binding SelectedEmployee}"/>
+                    <MenuItem Header="Удалить" Command="{Binding DeleteEmploeesCommand}" 
+                                               CommandParameter="{Binding SelectedEmployee}"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Фильтр ФИО:" FontSize="15" TextAlignment="Center" Margin="5,0,0,0"/>
+        <TextBox Grid.Row="0" x:Name="txtFilter" Text="{Binding FilterFIO,UpdateSourceTrigger=PropertyChanged}" FontFamily="Times New Roman" FontSize="18" Margin="100,2,10,2" />
+    </Grid>
+</Window>

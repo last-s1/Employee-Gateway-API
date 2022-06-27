@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Server", "Application.Server\Application.Server.csproj", "{D8A0D925-FAB8-4200-97F9-B5D401D99CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.WPF", "Application.WPF\Application.WPF.csproj", "{AA05F81C-AAE6-47E8-B95F-5C7A873EF04C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Model", "Application.Model\Application.Model.csproj", "{1D18B89E-B95D-4472-A13F-318242D49B2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8A0D925-FAB8-4200-97F9-B5D401D99CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A0D925-FAB8-4200-97F9-B5D401D99CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A0D925-FAB8-4200-97F9-B5D401D99CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A0D925-FAB8-4200-97F9-B5D401D99CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA05F81C-AAE6-47E8-B95F-5C7A873EF04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA05F81C-AAE6-47E8-B95F-5C7A873EF04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA05F81C-AAE6-47E8-B95F-5C7A873EF04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA05F81C-AAE6-47E8-B95F-5C7A873EF04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D18B89E-B95D-4472-A13F-318242D49B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D18B89E-B95D-4472-A13F-318242D49B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D18B89E-B95D-4472-A13F-318242D49B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A5C4101-9671-4F9C-B25F-36F5ABA12D78}
+	EndGlobalSection
+EndGlobal
